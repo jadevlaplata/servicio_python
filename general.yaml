@@ -18,7 +18,7 @@ spec:
         - name: servicio-python
           image: jadevlaplata/servicio_python:01
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           resources:
             limits:
               cpu: "30m"   # Límite de CPU para el Pod (milicpus)
