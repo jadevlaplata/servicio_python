@@ -54,7 +54,7 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: ip172-18-0-6-cj6mk0sji7vg00frss6g.direct.labs.play-with-k8s.com
+    - host: cj6mk0sj_cj6mk2cji7vg00frss70
       http:
         paths:
           - path: /
