@@ -1,0 +1,28 @@
+# servicio_python-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicio-python-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servicio-python
+  template:
+    metadata:
+      labels:
+        app: servicio-python
+    spec:
+      containers:
+        - name: servicio-python
+          image: jadevlaplata/servicio_python:01
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "30m"   # Límite de CPU para el Pod (milicpus)
+              memory: "90Mi"  # Límite de memoria para el Pod
+            #requests:
+              #cpu: "100m"   # Recursos iniciales de CPU para el Pod (milicpus)
+              #memory: "64Mi"  # Recursos iniciales de memoria para el Pod

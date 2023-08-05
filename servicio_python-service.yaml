@@ -1,0 +1,15 @@
+# servicio_python-service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicio-python-service
+  namespace: default
+spec:
+  selector:
+    app: servicio-python
+  ports:
+    - protocol: TCP
+      port: 80  ###puerto hacia afuera
+      targetPort: 5000 ### puerto hacia adentro del cluster
+  type: NodePort
