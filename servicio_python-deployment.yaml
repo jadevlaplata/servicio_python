@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: servicio-python
-          image: docker.io/jadevlaplata/servicio_python:01
+          image: jadevlaplata/servicio_python:01
           ports:
             - containerPort: 8080
           resources:
